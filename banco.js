@@ -58,3 +58,16 @@ console.log("Status : " + (c.ativa ? "Ativa" : "Encerrada"));
 }
 // Teste final
 extrato(1);
+// ALTERE a linha do nomeBanco para:
+let nomeBanco = "BANCO DIGITAL PLUS";
+function encerrarConta(indice) {
+if (indice < 1 || indice > contas.length) {
+console.log("Conta não encontrada."); return;
+}
+contas[indice - 1].ativa = false;
+console.log("Conta de " + contas[indice-1].titular + " encerrada.");
+}
+// Teste
+criarConta("Carla Mendes", 750);
+encerrarConta(2);
+listarContas();
